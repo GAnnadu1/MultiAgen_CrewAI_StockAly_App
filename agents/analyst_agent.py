@@ -5,7 +5,6 @@ from tools.stock_research_tools import get_stock_price
 #initialze LLM
 llm = LLM(
     model="gemini/gemini-3.1-flash-lite",
-    api_key=os.environ["GEMINI_API_KEY"],
     temperature=0
     )
 
