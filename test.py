@@ -1,10 +1,13 @@
-import google.generativeai as genai
 import streamlit as st
+from google import genai
 
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+client = genai.Client(
+    api_key=st.secrets["GEMINI_API_KEY"]
+)
 
-model = genai.GenerativeModel("gemini-1.5-flash")
-
-response = model.generate_content("Say hello")
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents="Hello"
+)
 
 print(response.text)
