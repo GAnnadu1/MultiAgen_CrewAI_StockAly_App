@@ -1,5 +1,5 @@
-import streamlit as st
 from google import genai
+import streamlit as st
 
 st.write(bool(st.secrets.get("GEMINI_API_KEY")))
 
@@ -8,7 +8,7 @@ client = genai.Client(
 )
 
 response = client.models.generate_content(
-    model="gemini-omni-1.1-flash",
+    model="gemini-2.5-flash",
     contents="Hello"
 )
 
