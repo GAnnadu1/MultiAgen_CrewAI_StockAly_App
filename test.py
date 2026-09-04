@@ -6,7 +6,7 @@ client = genai.Client(
 )
 
 response = client.models.generate_content(
-    model="gemini-3.1-flash-lite",
+    model="gemini-omni-1.1-flash",
     contents="Hello"
 )
 
