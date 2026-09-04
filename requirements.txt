@@ -1,4 +1,7 @@
+streamlit
 crewai
 crewai-tools
-python-dotenv
 yfinance
+python-dotenv
+google-generativeai
+litellm
